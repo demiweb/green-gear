@@ -1,0 +1,33 @@
+.article
+  p, ul, ol
+    +notlast
+      margin-bottom: 30px
+      +md
+        margin-bottom: 15px
+  h1, h2, h3, h4, h5, h6, .title
+    font-weight: 700
+    color: $c-title
+    margin-bottom: .3em
+  h1
+    &:not(.title)
+      @extend .title
+      @extend .title--h3
+  h2
+    &:not(.title)
+      @extend .title
+      @extend .title--h4
+  a
+    text-decoration: underline
+    color: $blue
+  ul
+    li
+      +list-bullet
+      &::before
+        margin-right: .5em
+        font-weight: 700
+  ol
+    +counter('text', ')')
+    li
+      &::before
+        margin-right: .5em
+        font-weight: 700

@@ -1,5 +1,88 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="container">
+    <div class="footer__inner">
+      <div class="grid">
+        <div class="col col--lg-3">
+          <div class="footer__logo">
+            <a href="/" class="logo">
+              <img class="js-lazy" alt="" src="" data-src="./img/logo-white.png"/>
+            </a>
+          </div>
+
+          <div class="footer__text">Займаємося постачанням запчастин
+            для агротехніки з 1997 року та по праву
+            вважаємося кращими у цій індустрії 
+          серед конкурентів в Україні.</div>
+
+        </div>
+
+        <div class="col col--lg-2 col--sm-3 col--6">
+          <div class="footer__block">
+            <h5 class="footer__title title title--h5">Клієнту</h5>
+
+            {{ mixins.list(
+              name = 'nav',
+              modifications = { wrap: 'footer__nav nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Головна', modItem: 'nav__item-current' },
+                { link: 'Про нас' },
+                { link: 'Блог' },
+                { link: 'Оплата та доставка' },
+                { link: 'Замовити дзвінок' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="col col--lg-2 col--sm-3 col--6">
+          <div class="footer__block">
+            <h5 class="footer__title title title--h5">Контакти</h5>
+
+            {{ mixins.list(
+              name = '',
+              modifications = { wrap: 'footer__nav nav nav--footer', item: '', link: '' },
+              list = [
+                { link: '+38 (067) 818 38 38', href: 'tel:+380678183838' },
+                { link: '+38 (066) 322 33 65', href: 'tel:+380663223365' },
+                { link: 'ladimiragro2019@gmail.com', href: 'mailto:ladimiragro2019@gmail.com' },
+                { item: 'Київ, пр. Голосіївський, <br> буд. 93, офіс 222' }
+              ]
+            ) }}
+          </div>
+        </div>
+
+        <div class="col col--lg-5 col--sm-6">
+          <div class="footer__block">
+            <h5 class="footer__title title title--h5">Оберіть виробника</h5>
+
+            {{ mixins.list(
+              name = '',
+              modifications = { wrap: 'footer__nav footer__nav--lg nav nav--footer', item: '', link: '' },
+              list = [
+                { link: 'Case' },
+                { link: 'John Deere' },
+                { link: 'New Holland' },
+                { link: 'Case' },
+                { link: 'Kinze' },
+                { link: 'Case' },
+                { link: 'John Deere' },
+                { link: 'New Holland' },
+                { link: 'Case' },
+                { link: 'Kinze' }
+              ]
+            ) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__auth">
+        <div class="footer__auth-icon">
+          {{ mixins.icon('D') }}
+        </div>
+        <div class="footer__auth-title">Розробка сайту <br> <a href="#">«Demiweb International» </a></div>
+      </div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

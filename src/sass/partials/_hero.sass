@@ -1,0 +1,48 @@
+.hero
+  $this: &
+  color: $white
+  +cover
+  text-align: center
+  padding-top: 25px
+  padding-bottom: 75px
+  &__breadcrumbs
+    text-align: left
+    margin-bottom: 40px
+    +md
+      margin-bottom: 20px
+  &__title
+    margin-bottom: 20px
+    color: $white
+    +md
+      margin-bottom: 10px
+  &__subttl
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__btns
+    +flex
+    +md
+      margin-bottom: 30px
+    +xs
+      display: block
+  &__btn
+    +notlast
+      margin-right: 15px
+      +xs
+        margin-right: 0
+        margin-bottom: 15px
+  &__img
+    display: block
+    +md
+      margin-left: auto
+      margin-right: auto
+  &--lg
+    text-align: left
+    padding-top: 0 !important
+    padding-bottom: 0 !important
+    #{$this}__inner
+      padding-top: 8%
+      padding-bottom: 8%
+      +xs
+        padding-top: 80px
+        padding-bottom: 80px

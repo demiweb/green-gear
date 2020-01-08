@@ -1,0 +1,36 @@
+.nav
+  $this: &
+  li
+    display: inline-block
+    +tr(color .3s)
+    +notlast
+      margin-right: 60px
+      +xl
+        margin-right: 40px
+      +lg
+        margin-right: 0
+    +lg
+      display: block
+      margin-bottom: .75em
+  a
+    +tr(color .3s)
+    +hover
+      @extend #{$this}__item-current
+  &__item-current
+    color: $accent
+
+  &--footer
+    li
+      display: block
+      +notlast
+        margin-right: 0
+        margin-bottom: .7em
+        +xl
+          margin-right: 0
+        +lg
+          margin-right: 0
+    a
+      +hover
+        @extend #{$this}__item-current
+    #{$this}__item-current
+      color: $white

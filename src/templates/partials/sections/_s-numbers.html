@@ -1,0 +1,49 @@
+{%set
+numbers = [
+  {
+    number: { nmb: '1800+', title: 'Клієнтів' },
+    text: 'Які цілком задоволені нашими
+послугами та якістю наших
+запчастин для техніки'
+  },
+  {
+    number: { nmb: '19', title: 'Років' },
+    text: 'Постачаємо найкращі, лише оригінальні
+та завжди якісні запчастини для вашої 
+сільськогосподарської техніки'
+  },
+  {
+    number: { nmb: '120', title: 'Співробітників' },
+    text: 'Які кожного дня працюють для того,
+щоб ви отримували найкращі
+запчастини для вашої техніки'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section pb-0">
+  <div class="container">
+    <h2 class="section__title title"><strong>Ми</strong> у цифрах</h2>
+
+    <div class="grid">
+      {% for i in numbers %}
+      <div class="col col--4">
+        <!-- begin number-block -->
+        <div class="number-block">
+          <div class="number-block__nmb">
+            <div class="number">
+              <div class="number__nmb">{{ i.number.nmb }}</div>
+              <div class="number__title">{{ i.number.title }}</div>
+            </div>
+          </div>
+
+          <div class="number-block__text">{{ i.text | safe }}</div>
+        </div>
+        <!-- end number-block -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

@@ -1,0 +1,21 @@
+.number-block
+  border: 1px solid $gray-lightest
+  padding: 45px
+  text-align: center
+  height: 100%
+  +flex(flex-start, normal, column)
+  &__text
+    max-width: 320px
+    flex-grow: 1
+  &__nmb
+    margin-bottom: 10px
+
+.number
+  font-weight: 700  
+  +accent-grad
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
+  color: $accent
+  &__nmb
+    +css-lock(21, 45, 320, 1399, font-size)
+    line-height: 1.2

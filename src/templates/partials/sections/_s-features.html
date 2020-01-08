@@ -1,0 +1,62 @@
+{%set
+features = [
+  {
+    icon: 'help',
+    title: 'Надійність',
+    text: 'Залишаємося з вами протягом <br>
+всього часу експлуатації запчастин <br>
+та допоможемо у разі необхідності'
+  },
+  {
+    icon: 'quality',
+    title: 'Якість',
+    text: 'Постачаємо лише оригінальні <br>
+та якісні запчастини для вашої  <br>
+сільськогосподарської техніки'
+  },
+  {
+    icon: 'customer',
+    title: 'Індивідуальний підхід',
+    text: 'До кожного нашого клієнта ми <br>
+підходимо індивідуально, тому  <br>
+усі залишаюсться задоволені'
+  },
+  {
+    icon: 'clock',
+    title: 'Працюємо без вихідних',
+    text: 'Ми працюємо 7 днів на тиждень, <br>
+тому ви можете звернутися до нас <br>
+у будь-який зручний час'
+  }  
+]
+%}
+
+<!-- begin section -->
+<section class="section section--gray-light">
+  <div class="container">
+    <h2 class="section__title title"><strong>Наші</strong> переваги</h2>
+
+    <!-- begin features -->
+    <div class="features">
+      <div class="grid">
+        {% for i in features %}
+        <div class="col col--lg-3 col--md-4 col--6">
+          <!-- begin feature -->
+          <div class="feature">
+            <div class="feature__icon">
+              {{ mixins.icon(i.icon) }}
+            </div>
+
+            <h5 class="feature__title title title--h5 title--ttl">{{ i.title | safe }}</h5>
+
+            <div class="feature__text">{{ i.text | safe }}</div>
+          </div>
+          <!-- end feature -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end features -->
+  </div>
+</section>
+<!-- end section -->

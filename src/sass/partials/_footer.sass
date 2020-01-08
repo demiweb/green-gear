@@ -1,0 +1,44 @@
+.footer
+  background-color: $accent-dark
+  color: #826791
+  &__inner
+    padding-top: 35px
+  &__logo
+    margin-bottom: 10px
+  &__text
+    max-width: 240px
+    font-size: 12px
+  &__nav
+    color: #c0aace
+    font-size: $fz-sm
+    &--lg
+      ul
+        +flex(flex-start, normal, row, wrap)
+        > li
+          width: 25%
+          padding-right: 10px
+          +lg
+            width: 33.33333%
+          +sm
+            width: 50%
+  &__title
+    color: $white
+    margin-bottom: 20px
+    +md
+      margin-bottom: 10px
+  &__auth
+    +flex(flex-start, center)
+
+  &__auth-icon
+    color: $white
+    background-color: $black
+    width: 38px
+    height: 38px
+    +flex(center, center)
+    margin-right: 10px
+    .icon
+      font-size: 21px
+  &__auth-title
+    font-size: 12px
+    a
+      text-decoration: underline

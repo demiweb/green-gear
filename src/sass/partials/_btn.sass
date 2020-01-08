@@ -1,0 +1,20 @@
+.btn
+  $this: &
+  display: inline-block
+  text-align: center
+  color: $white
+  min-width: 255px
+  border: 1px solid $accent
+  padding: .8em 1em
+  +accent-grad
+  +tr(opacity .3s)
+  +xs
+    min-width: 0
+    width: 100%
+  &:not(#{this}--no-hover)
+    +hover
+      opacity: .7
+
+  &--transp-white
+    background-image: none
+    border-color: $white

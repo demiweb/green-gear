@@ -1,0 +1,62 @@
+{%set
+marks = [
+  {
+    img: 'berthoud.400.300.0.1.t.png',
+    title: 'John deere'
+  },
+  {
+    img: 'brands_20130617_142210_1371468130.png',
+    title: 'John deere'
+  },
+  {
+    img: 'Claas_Logo.svg.png',
+    title: 'John deere'
+  },
+  {
+    img: 'kverneland-logo-png-transparent.png',
+    title: 'John deere'
+  },
+  {
+    img: 'logo_695_1522053374.png',
+    title: 'John deere'
+  },
+  {
+    img: 'Massey_Ferguson-logo-5B4B212A24-seeklogo.com.png',
+    title: 'John deere'
+  },
+  {
+    img: '',
+    title: 'John deere'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title"><strong>Оберіть</strong> виробника</h2>
+
+    <!-- begin marks -->
+    <div class="marks">
+      <div class="grid">
+        {% for i in marks %}
+        <div class="col col--lg-3 col--md-4 col--6">
+          <!-- begin  -->
+          <a href="#" class="mark-link">
+            <span
+              class="mark-link__img"
+              >{% if i.img %}
+                <img class="js-lazy" alt="" src="" data-src="./img/logos/{{ i.img }}"/>
+              {% endif %}</span>
+
+            <span class="mark-link__title">{{ i.title | safe }}</span>
+          </a>
+          <!-- end  -->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end marks -->
+  </div>
+</section>
+<!-- end section -->

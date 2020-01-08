@@ -1,0 +1,46 @@
+=scrollbar($background: $white)
+  &::-webkit-scrollbar
+    width: em(8)
+  &::-webkit-scrollbar-track
+    background-color: $gray-lightest
+    box-shadow: inset #{em(3)} 0 0px $background, inset -#{em(3)} 0 0px $background
+    outline: none
+  &::-webkit-scrollbar-thumb
+    background-color: $accent
+    +tr(background-color .3s)
+    +hover
+      background-color: $accent-dark
+
+.scrollbar
+  overflow: auto
+  padding-right: 30px
+  +scrollbar
+  +md
+    padding-right: 15px
+
+.simplebar-scrollbar
+  width: 100%
+  z-index: 1
+  +hover
+    &::before
+      background-color: $accent-dark
+  &::before
+    opacity: 1 !important
+    border-radius: 0
+    background-color: $accent
+    width: 100%
+    right: 0
+    left: 0
+    z-index: 1
+
+.simplebar-track.simplebar-vertical
+  width: em(8)
+  +after
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 0
+    background-color: $gray-lightest
+    width: em(2)
+    left: 50%
+    transform: translate(-50%, 0)

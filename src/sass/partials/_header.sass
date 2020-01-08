@@ -1,0 +1,128 @@
+.header
+  background-color: $white
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  z-index: 10
+  color: $c-title
+  box-shadow: 0 0 10px rgba($black, .15)
+  &__inner
+    height: $header-height
+    padding-top: 5px
+    padding-bottom: 5px
+    @extend .grid
+    @extend .grid--no-bottom-gap
+    align-items: center
+    +lg
+      height: $header-height-lg
+      flex-wrap: nowrap
+      margin-left: 0
+      margin-right: 0
+  &__logo
+    @extend .col
+    @extend .col--lg-3
+    @extend .col--no-bottom-gap
+    +lg
+      width: auto
+      padding-left: 0
+      padding-right: 0
+  &__nav
+    @extend .col
+    @extend .col--lg-7
+    @extend .col--no-bottom-gap
+    +lg
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 10
+      padding: 15px
+      background-color: $white
+      overflow: auto
+      +vertical
+      +ready
+        +tr(transform .5s $easeCustom)
+      // +hidden
+      transform: translate(0, -100%)
+      &--open
+        transform: translate(0, 0)
+
+  &__nav-in
+    +lg
+      display: inline-block
+      vertical-align: middle
+      font-size: $fz
+      +sm
+        font-size: $fz-sm-px
+  &__contacts
+    @extend .col
+    @extend .col--lg-2
+    @extend .col--no-bottom-gap
+    +flex(flex-end)
+    +lg
+      width: auto
+      flex-grow: 1
+    +xs
+      // justify-content: flex-start
+  &__contacts-in
+    text-align: center
+    +lg
+      +flex(flex-start, center)
+      > *
+        +notlast
+          margin-right: 10px
+    +xs
+      display: block
+      > *
+        +notlast
+          margin-right: 0
+  &__burger
+    display: none
+    +lg
+      display: block
+
+.header-contact
+  +tr(color .3s)
+  +hover
+    color: $accent
+
+.header-call
+  font-size: $fz-sm
+  color: #a6a6a6
+  text-decoration: underline
+  +tr(color .3s)
+  +hover
+    color: $accent
+
+.burger 
+  display: block
+  width: 28px
+  height: 28px
+  position: relative
+  z-index: 15
+  span
+    display: block
+    &, &::after, &::before
+      width: 100%
+      height: 2px
+      background-color: currentColor
+      backface-visibility: hidden
+      border-radius: 2px
+      +tr(transform .3s)
+    &::after, &::before
+      content: ""
+      position: absolute
+      left: 0
+    &::after
+      top: 5px
+    &::before
+      bottom: 5px
+  &--active    
+    span
+      background-color: transparent
+      &::before
+        transform: rotate(45deg) translate(-7px, -5px)
+      &::after
+        transform: rotate(-45deg) translate(-6px, 4px)

@@ -1,5 +1,57 @@
 <!-- begin hero -->
-<section class="hero">
-  <h1>hello from hero</h1>
+<section class="hero {% if hero.mod %} {{ hero.mod }}{% endif %}{% if hero.bg %} js-lazy{% endif %}" {% if hero.bg %}data-background-image="./img/hero/{{ hero.bg }}"{% endif %}>
+  <div class="container">
+    {% if page === 'home' %}
+    <div class="hero__inner">
+      <div class="grid grid--align-items-center">
+        <div class="col col--lg-6 col--xs-7">
+          {% if hero.title %}
+            <div class="hero__title title">{{ hero.title | safe }}</div>
+          {% endif %}
+
+          {% if hero.subttl %}
+          <div class="hero__subttl">{{ hero.subttl | safe }}</div>
+          {% endif %}
+
+          {% if hero.btns %}
+          <div class="hero__btns">
+            {% for i in hero.btns %}
+            <div class="hero__btn">
+              {{ mixins.btn(
+                title = i.title,
+                mod = i.mod
+              ) }}
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        <div class="col col--lg-6 col--md-5">
+          <img class="hero__img js-lazy" alt="" src="" data-src="./img/hero/img-hero-home.png"/>
+        </div>
+      </div>
+    </div>
+    {% else %}
+
+      {% if hero.breadcrumbs %}
+        {% if hero.breadcrumbs.mod %}
+          {% set breadcrumbsMod = 'hero__breadcrumbs ' + hero.breadcrumbs.mod %}
+        {% else %}
+          {% set breadcrumbsMod = 'hero__breadcrumbs'%}
+        {% endif %}
+        
+        {{ mixins.list(
+          name = 'breadcrumbs',
+          modifications = { wrap: breadcrumbsMod, item: '', link: '' },
+          list = hero.breadcrumbs.list
+        ) }}
+      {% endif %}
+      {% if hero.title %}
+        <div class="hero__title title">{{ hero.title | safe }}</div>
+      {% endif %}
+
+    {% endif %}
+  </div>
 </section>
 <!-- end hero -->

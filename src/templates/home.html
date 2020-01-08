@@ -1,0 +1,31 @@
+---
+title: home
+page: home
+hero: {
+  mod: 'hero--lg',
+  bg: 'bg-hero-home.jpg',
+  title: '<strong>Якісні оригінальні запчастини</strong> <br>
+    для сільськогосподарської техніки
+  ',
+  subttl: 'Команда «Лад і мир агро» - це надійний партнер, який пройде з Вами 
+шлях протягом усього періоду експлуатації, забеспечуючи якісне 
+постачання запасних частин для імпортної техніки',
+  btns: [
+    {
+      title: 'Замовити запчастину'
+    },
+    {
+      title: 'Обрати виробника',
+      mod: 'btn--transp-white'
+    }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-trade.html" %}
+  {% include "partials/sections/_s-features.html" %}
+  {% include "partials/sections/_s-seo.html" %}
+{% endblock %}

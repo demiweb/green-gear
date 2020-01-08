@@ -1,0 +1,21 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title"><strong>Наша</strong> фотогалерея</h2>
+
+    <!-- begin slider -->
+    <div class="slider__wrap">
+      <div class="slider slider--gallery js-slider">
+        {% for i in range(0, 6) %}
+        <div
+          class="slide gallery-item"
+          >
+            <span class="gallery-item__img js-lazy" data-background-image="./img/robert-wiedemann-FJGZFxtQWko-unsplash.jpg"></span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- end slider -->
+  </div>
+</section>
+<!-- end section -->

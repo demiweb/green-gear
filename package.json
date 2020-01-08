@@ -111,6 +111,8 @@
     "core-js": "^3.5.0",
     "intersection-observer": "^0.7.0",
     "jquery": "^3.4.1",
-    "lozad": "^1.14.0"
+    "lozad": "^1.14.0",
+    "simplebar": "^5.1.0",
+    "tiny-slider": "^2.9.2"
   }
 }
