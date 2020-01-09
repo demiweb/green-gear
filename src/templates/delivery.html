@@ -1,0 +1,23 @@
+---
+title: blog-page
+page: blog-page
+hero: {
+  bg: 'bg-hero-blog-page.jpg',
+  mod: '',
+  titleH1: true,
+  title: '<strong>Оплата та</strong> доставка',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { item: 'Оплата та доставка', modItem: 'breadcrumbs__item-current' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-delivery.html" %}
+{% endblock %}

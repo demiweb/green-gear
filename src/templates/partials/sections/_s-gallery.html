@@ -4,15 +4,21 @@
     <h2 class="section__title title"><strong>Наша</strong> фотогалерея</h2>
 
     <!-- begin slider -->
-    <div class="slider__wrap">
-      <div class="slider slider--gallery js-slider">
+    <div class="slider__wrap slider--gallery__wrap">
+      <div class="slider slider--gallery js-slider js-lightgallery" data-slider="gallery">
         {% for i in range(0, 6) %}
-        <div
+        <a
+          href="./img/robert-wiedemann-FJGZFxtQWko-unsplash.jpg"
           class="slide gallery-item"
           >
             <span class="gallery-item__img js-lazy" data-background-image="./img/robert-wiedemann-FJGZFxtQWko-unsplash.jpg"></span>
-          </div>
+          </a>
         {% endfor %}
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__prev prev js-slider-prev"></button>
+        <button class="slider__next next js-slider-next"></button>
       </div>
     </div>
     <!-- end slider -->

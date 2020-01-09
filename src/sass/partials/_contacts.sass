@@ -1,0 +1,23 @@
+.contacts
+  color: $c-title
+  &__list
+    +flex(flex-start, normal, row, wrap)
+    +md
+      display: block
+  &__item
+    // width: 50%
+    padding-right: 10px
+    margin-bottom: .5em
+    &:nth-child(odd)
+      margin-right: 60px
+      +lg
+        margin-right: 40px
+      +md
+        margin-right: 0
+  &__link
+    +tr(color .3s)
+    +hover
+      color: $accent
+    .icon
+      position: relative
+      top: .1em

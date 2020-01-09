@@ -62,9 +62,21 @@ body
 .gallery-item
   +cover
   display: block
-  padding-top: 10%
+  padding-top: 14%
   width: percentage(3/12)
   position: relative
+  // pointer-events: none
+  +lg
+    width: 33.33333%
+    padding-top: 18%
+  +md
+    width: 50%
+    padding-top: 25%
+  +xs
+    width: 100%
+    padding-top: 40%
+  +xxs
+    padding-top: 60%
   &__img
     +cover
     position: absolute
@@ -73,8 +85,30 @@ body
     bottom: 0
     left: 0
     right: 30px
+    right: var(--grid-gap, 30px)
   &--center
-    padding-top: 15%
+    padding-top: 24%
     width: 50%
+    pointer-events: auto
+
+.aside
+  &__title
+    background-color: $gray-lightest
+    text-transform: uppercase
+    text-align: center
+    color: $c-title
+    font-size: $fz-sm
+    padding-top: .3em
+    padding-bottom: .3em
+
+.date
+  font-size: 13px
+  color: #bebebe
+  +flex(flex-start, center)
+  &__icon
+    font-size: 0
+    margin-right: 5px
+    .icon
+      font-size: 15px
 
     

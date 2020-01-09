@@ -1,0 +1,26 @@
+---
+title: blog-page
+page: blog-page
+hero: {
+  bg: 'bg-hero-blog-page.jpg',
+  mod: 'hero--md',
+  date: true,
+  title: '<strong>Як правильно обрати запчастини для комбайнів марок 
+John Deer та New Holland, якщо у вас немає досвіду</strong>',
+  breadcrumbs: {
+    list: [
+      { link: 'Головна' },
+      { item: '-' },
+      { link: 'Головна' },
+      { item: '-' },
+      { item: 'Як правильно обрати запчастини', modItem: 'breadcrumbs__item-current' }
+    ]
+  }
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/_hero.html" %}
+  {% include "partials/sections/_s-blog-page.html" %}
+{% endblock %}

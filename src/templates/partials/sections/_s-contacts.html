@@ -1,0 +1,42 @@
+<!-- begin section -->
+<section class="hero hero--lg hero--section js-lazy" data-background-image="./img/bg-contacts.jpg">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="grid grid--align-items-center">
+        <div class="col col--lg-6 col--xs-7">
+          <h1 class="hero__title title"><strong>Зв’яжіться</strong> з нами</h1>
+
+          <div class="hero__subttl">Зателефонуйте нам за телефонами нижче, <br>
+          напишіть листа на e-mail або завітайте до нас у гості!</div>
+
+          <div class="hero__contacts">
+            {{ mixins.list(
+              name = 'contacts',
+              modifications = { wrap: '', list: 'contacts__list', item: 'contacts__item', link: 'contacts__link' },
+              list = [
+                { link: mixins.icon('telephone') + '+38 (067) 818 38 38', href: 'tel:+380678183838' },                
+                { link: mixins.icon('email') + 'ladimiragro2019@gmail.com', href: 'mailto:ladimiragro2019@gmail.com' },
+                { link: mixins.icon('telephone') + '+38 (066) 322 33 65', href: 'tel:+380663223365' },
+                { item: mixins.icon('placeholder') + 'Київ, пр. Голосіївський, буд. 93, оф. 222' }          
+              ]
+            ) }}
+          </div>
+
+          <div class="hero__btn">
+            {{ mixins.btn(
+              title = 'Передзвоніть мені',
+              mod = 'js-popup-open',
+              href = false,
+              attributes = { 'data-popup-target': 'call' }
+            ) }}
+          </div>
+        </div>
+
+        <div class="col col--lg-6 col--xs-5">
+          <img class="hero__img js-lazy" alt="" src="" data-src="./img/dude.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

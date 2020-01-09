@@ -47,9 +47,23 @@
           list = hero.breadcrumbs.list
         ) }}
       {% endif %}
-      {% if hero.title %}
-        <div class="hero__title title">{{ hero.title | safe }}</div>
-      {% endif %}
+
+      <div class="hero__inner">
+        {% if hero.title %}
+          {% if hero.date %}
+          <div class="hero__date date">
+            <div class="date__icon">{{ mixins.icon('passage-of-time') }}</div>
+            <div class="date__title">15 Червня, 2019</div>
+          </div>
+          {% endif %}
+
+          {% if hero.titleH1 %}
+            <h1 class="hero__title title">{{ hero.title | safe }}</h1>
+          {% else %}
+            <div class="hero__title title">{{ hero.title | safe }}</div>
+          {% endif %}
+        {% endif %}
+      </div>
 
     {% endif %}
   </div>

@@ -3,3 +3,8 @@ ProjectTitle: green-gear
 PageList:
 - file: home.html
 - file: about.html
+- file: blog.html
+- file: blog-page.html
+- file: delivery.html
+- file: models.html
+- file: contacts.html

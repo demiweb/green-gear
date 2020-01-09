@@ -1,0 +1,30 @@
+{%set
+posts = [
+  {
+    mod: 'post--sm',
+    title: { h6: true }
+  },
+  {
+    mod: 'post--sm',
+    title: { h6: true }
+  },
+  {
+    mod: 'post--sm',
+    title: { h6: true }
+  }
+]
+%}
+
+<!-- begin aside -->
+<aside class="aside">
+  <div class="aside__title">Интересные статьи</div>
+
+  <!-- begin posts -->
+  <div class="posts">
+    {% for i in posts %}
+      {% include "partials/_post.html" %}
+    {% endfor %}
+  </div>
+  <!-- end posts -->
+</aside>
+<!-- end aside -->

@@ -2,6 +2,7 @@
   $this: &
   color: $white
   +cover
+  background-color: $gray-lightest
   text-align: center
   padding-top: 25px
   padding-bottom: 75px
@@ -36,6 +37,14 @@
     +md
       margin-left: auto
       margin-right: auto
+  &__date
+    justify-content: center
+    margin-bottom: 10px
+  &__contacts
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+
   &--lg
     text-align: left
     padding-top: 0 !important
@@ -46,3 +55,26 @@
       +xs
         padding-top: 80px
         padding-bottom: 80px
+  &--md
+    #{$this}__inner
+      padding-top: 7%
+      padding-bottom: 7%
+      +xs
+        padding-top: 60px
+        padding-bottom: 60px
+  &--section
+    background-position: 100% 50%
+    color: inherit
+    overflow: hidden
+    #{$this}__title
+      color: $c-title
+    #{$this}__inner
+      padding-bottom: 0
+      padding-top: 30px
+    #{$this}__btn
+      margin-bottom: 30px
+    #{$this}__img
+      +sm
+        margin-bottom: -30px
+      +xs        
+        display: none

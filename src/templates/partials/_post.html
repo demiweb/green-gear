@@ -1,0 +1,39 @@
+<!-- begin post -->
+<a href="#" class="post{% if i.mod %} {{ i.mod }}{% endif %}">
+  <div class="post__img js-lazy" data-background-image="./img/10.jpg"></div>
+
+  <div class="post__content">
+    {% if i.title.h6  %}
+    <h6 class="post__title title title--h6">
+        Як правильно обрати запчастини для комбайнів марок 
+      John Deere та New Holland, якщо у вас немає досвіду
+    </h6>
+    {% else %}
+    <h4 class="post__title title title--h4">
+        Як правильно обрати запчастини для комбайнів марок 
+      John Deere та New Holland, якщо у вас немає досвіду
+    </h4>
+    {% endif %}
+
+    <div class="post__date date">
+      <div class="date__icon">{{ mixins.icon('passage-of-time') }}</div>
+      <div class="date__title">15 Червня, 2019</div>
+    </div>
+
+    {% if i.text %}
+
+      <div class="post__text">Обираючи подібні агрегати без досвіду, варто звернути увагу на виробника.  Краще обрати запчастини дорожче, які прослужать багато років, ніж придбати дешеві варіанти, проблем з якими буде
+      більше, ніж користі. Тому ми радимо не звертати увагу на першу...</div>
+    {% endif %}
+
+    {% if i.btn %}
+      {{ mixins.btn(
+        title = 'Читати детальніше',
+        mod = 'post__btn btn--no-hover',
+        href = false,
+        isInline = true
+      ) }}
+    {% endif %}
+  </div>
+</a>
+<!-- end post -->

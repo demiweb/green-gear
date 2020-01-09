@@ -1,0 +1,33 @@
+.model-card
+  +flex(flex-start, normal, column)
+  height: calc(100% - 80px)
+  margin-bottom: 80px
+  +lg
+    margin-bottom: 60px
+    height: calc(100% - 60px)
+  +md
+    margin-bottom: 40px
+    height: calc(100% - 40px)
+  +sm
+    margin-bottom: 20px
+    height: calc(100% - 20px)
+  +xs
+    // margin-bottom: 0
+    height: auto
+  &__content
+    flex-grow: 1
+    +flex(flex-start, normal, column)
+  &__img
+    +cover
+    padding-top: 80%
+    margin-bottom: 30px
+    +md
+      margin-bottom: 15px
+  &__title
+    color: $c-title
+    margin-bottom: 8px
+  &__text
+    margin-bottom: 20px
+    flex-grow: 1
+    +md
+      margin-bottom: 10px
