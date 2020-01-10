@@ -130,7 +130,7 @@
                       <li><a href="#">Про нас</a></li>
                       <li><a href="#">Блог</a></li>
                       <li><a href="#">Оплата та доставка</a></li>
-                      <li><a href="#">Замовити дзвінок</a></li>
+                      <li><a href="#" class=" js-popup-open" data-popup-target="call">Замовити дзвінок</a></li>
                     </ul>
                   </nav>
                   <!-- end nav -->
@@ -189,6 +189,88 @@
       <!-- end footer -->
     </div>
     <!-- END content -->
+    <!-- begin popup -->
+    <div class="popup js-popup" data-popup="call">
+      <div class="popup__inner">
+        <button class="popup__close close js-popup-close"></button>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <h2 class="form__title title"><strong>З’явилися</strong> питання?</h2>
+              <div class="form__subttl">Залиште ваші контактні дані та наш менеджер зв’яжеться з вами у найближчий час</div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Ім’я">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="tel" placeholder="+38 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field form__field--btn">
+                <button class="btn">Передзвоніть мені</button>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
+    <!-- begin popup -->
+    <div class="popup js-popup" data-popup="order">
+      <div class="popup__inner">
+        <button class="popup__close close js-popup-close"></button>
+        <div class="popup__form">
+          <!-- begin form -->
+          <div class="form">
+            <form>
+              <h2 class="form__title title"><strong>Замовити</strong> запчастину</h2>
+              <div class="form__subttl">Залиште ваші контактні дані та наш менеджер зв’яжеться з вами у найближчий час</div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="text" placeholder="Ім’я">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="tel" placeholder="+38 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin input -->
+                <div class="input">
+                  <input type="email" placeholder="E-mail">
+                </div>
+                <!-- end input -->
+              </div>
+              <div class="form__field">
+                <!-- begin textarea -->
+                <div class="input input--textarea">
+                  <textarea class="js-textarea" placeholder="Коментар (необов’язково)"></textarea>
+                </div>
+                <!-- end textarea -->
+              </div>
+              <div class="form__field form__field--btn">
+                <button class="btn">Замовити</button>
+              </div>
+            </form>
+          </div>
+          <!-- end form -->
+        </div>
+      </div>
+    </div>
+    <!-- end popup -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
