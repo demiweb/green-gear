@@ -5,6 +5,7 @@ import 'core-js/features/object/assign'
 import 'core-js/features/object/values'
 import 'intersection-observer'
 import './lib/polyfill'
+import smoothscroll from 'smoothscroll-polyfill'
 
 import Popup from 'popup-simple'
 import classNames from './classNames'
@@ -15,6 +16,7 @@ import setLazy from './components/setLazy'
 import setScrollbar from './components/setScrollbar'
 import setGallerySlider from './components/setGallerySlider'
 import setTextareaHeight from './components/Textarea/Textarea'
+import scrollTo from './components/scrollTo'
 // import { setVhProperty } from './helpers'
 
 import Menu from './components/Menu/Menu'
@@ -27,6 +29,7 @@ class App {
     this.classNames = classNames
     this.dom = {
       body: document.body,
+      header: document.querySelector('.header'),
     }
     this.state = {
       hasMenuOpen: false,
@@ -57,12 +60,14 @@ class App {
       setScrollbar,
       setGallerySlider,
       setTextareaHeight,
+      scrollTo,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
   }
 
   init() {
+    smoothscroll.polyfill()
     this.initMethods()
 
     this.menu.init()

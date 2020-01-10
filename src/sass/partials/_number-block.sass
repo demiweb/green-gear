@@ -17,10 +17,13 @@
 
 .number
   font-weight: 700  
-  +accent-grad
-  -webkit-text-fill-color: transparent
-  -webkit-background-clip: text
   color: $accent
   &__nmb
     +css-lock(21, 45, 320, 1399, font-size)
     line-height: 1.2
+@supports (-webkit-text-fill-color: transparent)
+  .number
+    +accent-grad
+    -webkit-text-fill-color: transparent
+    -webkit-background-clip: text
+    

@@ -115,6 +115,7 @@
     "lozad": "^1.14.0",
     "popup-simple": "^1.0.5",
     "simplebar": "^5.1.0",
+    "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^5.2.1",
     "throttle-debounce": "^2.1.0",
     "tiny-slider": "^2.9.2"

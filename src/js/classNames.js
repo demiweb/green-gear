@@ -7,6 +7,9 @@ export default {
   scrollbar: 'js-scrollbar',
   gallery: 'js-lightgallery',
   textarea: 'js-textarea',
+  scrollTo: {
+    btn: 'js-scroll-to-btn',
+  },
   slider: {
     container: 'js-slider',
     slider: {
