@@ -6,6 +6,7 @@ export default {
   },
   scrollbar: 'js-scrollbar',
   gallery: 'js-lightgallery',
+  textarea: 'js-textarea',
   slider: {
     container: 'js-slider',
     slider: {

@@ -6,6 +6,7 @@ import 'core-js/features/object/values'
 import 'intersection-observer'
 import './lib/polyfill'
 
+import Popup from 'popup-simple'
 import classNames from './classNames'
 
 import sayHello from './lib/sayHello'
@@ -13,6 +14,8 @@ import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 import setScrollbar from './components/setScrollbar'
 import setGallerySlider from './components/setGallerySlider'
+import setTextareaHeight from './components/Textarea/Textarea'
+// import { setVhProperty } from './helpers'
 
 import Menu from './components/Menu/Menu'
 
@@ -35,6 +38,7 @@ class App {
         menu: 'header__nav',
       },
     })
+    this.popup = new Popup()
   }
 
   updateState(state) {
@@ -48,9 +52,11 @@ class App {
     this.methods = {
       sayHello,
       setHTMLClassNames,
+      // setVhProperty,
       setLazy,
       setScrollbar,
       setGallerySlider,
+      setTextareaHeight,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
@@ -62,6 +68,7 @@ class App {
     this.menu.init()
     this.menu.onToggle = this.onMenuToggle.bind(this)
     this.menu.onClose = this.onMenuClose.bind(this)
+    this.popup.init()
   }
 
   onMenuToggle() {

@@ -19,7 +19,9 @@
             <div class="hero__btn">
               {{ mixins.btn(
                 title = i.title,
-                mod = i.mod
+                mod = i.mod,
+                href = i.href,
+                attributes = i.attributes
               ) }}
             </div>
             {% endfor %}

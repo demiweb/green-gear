@@ -1,0 +1,50 @@
+{%set
+form = {
+  title: '<strong>Замовити</strong> запчастину',
+  subttl: 'Залиште ваші контактні дані та наш менеджер
+зв’яжеться з вами у найближчий час',
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'Ім’я',
+      fieldClass: '',
+      fieldAttributes: {}
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+      fieldClass: '',
+      fieldAttributes: {}
+    },
+    {
+      name: 'input',
+      type: 'email',
+      placeholder: 'E-mail',
+      fieldClass: '',
+      fieldAttributes: {}
+    },
+    {
+      name: 'textarea',
+      type: '',
+      placeholder: 'Коментар (необов’язково)',
+      fieldClass: 'js-textarea',
+      fieldAttributes: {}
+    }
+  ],
+  btn: { title: 'Замовити' }
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="order">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+
+    <div class="popup__form">
+      {% include "partials/_form.html" %}
+    </div>
+  </div>
+</div>
+<!-- end popup -->

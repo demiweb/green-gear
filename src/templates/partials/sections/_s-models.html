@@ -20,7 +20,9 @@
               <div class="model-card__btn">
                 {{ mixins.btn(
                   title = 'Замовити запчастину',
-                  mod = ''
+                  mod = 'js-popup-open',
+                  href = false,
+                  attributes = { 'data-popup-target': 'order' }
                 ) }}
               </div>
               

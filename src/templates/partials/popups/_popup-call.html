@@ -1,0 +1,35 @@
+{%set
+form = {
+  title: '<strong>З’явилися</strong> питання?',
+  subttl: 'Залиште ваші контактні дані та наш менеджер
+зв’яжеться з вами у найближчий час',
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: 'Ім’я',
+      fieldClass: '',
+      fieldAttributes: {}
+    },
+    {
+      name: 'input',
+      type: 'tel',
+      placeholder: '+38 ( _ _ _ ) _ _ _ - _ _ - _ _',
+      fieldClass: '',
+      fieldAttributes: {}
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+
+    <div class="popup__form">
+      {% include "partials/_form.html" %}
+    </div>
+  </div>
+</div>
+<!-- end popup -->

@@ -25,3 +25,7 @@ $gray-lightest: #f1f1f1
 
 $header-height: 100px
 $header-height-lg: 60px
+
+=windowHeight($offset: 0px)
+  height: calc(100vh - #{$offset})
+  height: calc((var(--vh, 1vh) * 100) - #{$offset})

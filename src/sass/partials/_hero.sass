@@ -65,12 +65,20 @@
   &--section
     background-position: 100% 50%
     color: inherit
-    overflow: hidden
+    overflow: hidden    
     #{$this}__title
       color: $c-title
     #{$this}__inner
       padding-bottom: 0
       padding-top: 30px
+      +flex(flex-end, normal, column)
+      min-height: 70vh
+      +lg
+        min-height: 0
+      // +windowHeight($header-height)
+      // +lg
+      //   +windowHeight($header-height-lg)
+
     #{$this}__btn
       margin-bottom: 30px
     #{$this}__img
