@@ -18,6 +18,12 @@ export default {
       next: 'js-slider-next',
       slide: 'swiper-slide',
     },
+    productGallery: {
+      slider: 'js-product-gallery-slider',
+      thumbs: 'js-product-gallery-thumbs',
+      next: 'js-product-gallery-next',
+      prev: 'js-product-gallery-prev',
+    },
     // plugin: {
     //   container: 'swiper-container',
     //   initialized: 'swiper-container-initialized',

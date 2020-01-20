@@ -1,0 +1,59 @@
+<!-- begin section -->
+<section class="section">
+  <!-- begin product -->
+  <div class="product">
+    <div class="container">
+      <div class="grid">
+        <div class="col col--md-6">
+          
+            {% include "partials/_product-gallery.html" %}
+          
+        </div>
+
+        <div class="col col--md-6">
+          <div class="product__content">
+            <div class="product__block">
+              <h3 class="product__title title title--h3 title--h3-sm">Бендикс стартера Евро для трактора серії John Deere 6B</h3>
+              <small class="product__art small">Артикул: 566651DF</small>
+
+              <div class="product__btn-block">
+                {{ mixins.btn(
+                  title = 'Замовити в один клік',
+                  mod = 'product__btn js-popup-open',
+                  href = false,
+                  attributes = { 'data-popup-target': 'call' }
+                ) }}
+
+                <div class="price">
+                  <div class="price__nmb">550</div>
+                  <div class="price__curr">грн</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__block product__text">
+              Бендикс стратера Евро для тракторів серії John Deere 6B випускається с 1998 року. Гарантія на запчастину складає 5 років (від офіційного виробника). Виготовляються 
+              як для відчизняних тракторів, так і для імпортних сільськогосподарських машин. Також виготовляються інші версії запчастини для різних моделей.
+            </div>
+
+            <div class="product__block">
+              {{ mixins.list(
+                name = 'product-meta-list',
+                modifications = { wrap: '', list: 'product-meta-list__list', dt: 'product-meta-list__title', dd: 'product-meta-list__text' },
+                descr = true,
+                list = [
+                  { dt: 'Матеріал:', dd: 'метал' },
+                  { dt: 'Виробництво:', dd: 'США' },
+                  { dt: 'Тип запчастини:', dd: 'оригінал' },
+                  { dt: 'Застосування:', dd: 'John Deere 6B' }
+                ]
+              ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end product -->  
+</section>
+<!-- end section -->

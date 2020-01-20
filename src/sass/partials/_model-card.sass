@@ -1,19 +1,21 @@
 .model-card
   +flex(flex-start, normal, column)
-  height: calc(100% - 80px)
-  margin-bottom: 80px
+  height: calc(100% - 50px)
+  margin-bottom: 50px
   +lg
-    margin-bottom: 60px
-    height: calc(100% - 60px)
+    margin-bottom: 30px
+    height: calc(100% - 30px)
   +md
-    margin-bottom: 40px
-    height: calc(100% - 40px)
+    margin-bottom: 10px
+    height: calc(100% - 10px)
   +sm
-    margin-bottom: 20px
-    height: calc(100% - 20px)
+    margin-bottom: 0px
+    height: 100%
   +xs
     // margin-bottom: 0
     height: auto
+  &__art
+    margin-bottom: 10px
   &__content
     flex-grow: 1
     +flex(flex-start, normal, column)
@@ -31,3 +33,6 @@
     flex-grow: 1
     +md
       margin-bottom: 10px
+  &__price
+    margin-bottom: 15px
+    

@@ -1,0 +1,94 @@
+.product
+  &__title
+    color: $c-title
+    margin-bottom: 10px
+  &__art
+    margin-bottom: 10px
+  &__btn-block
+    +flex(flex-start, center)
+    +xs
+      display: block
+  &__btn
+    margin-right: 30px
+    +xs
+      margin-right: 0
+      margin-bottom: 15px
+  &__block    
+    +notlast
+      border-bottom: 1px solid #e9e9e9
+      padding-bottom: em(15)
+      padding-top: em(15)
+  &__gallery
+    height: 100%
+
+.product-meta-list
+  &__list
+    +flex(flex-start, normal, row, wrap)
+    // margin-top: em(-7)
+  &__title, &__text
+    border-bottom: 1px solid  #e9e9e9
+    padding-top: em(7)
+    padding-bottom: em(7)
+  &__title
+    width: 25%
+    font-weight: 700
+    +xs
+      width: 35%
+    +xxs
+      width: 40%
+  &__text
+    width: 75%
+    +xs
+      width: 65%
+    +xxs
+      width: 60%
+
+.product-gallery
+  *
+    box-sizing: border-box
+  +flex
+  &__thumbs
+    width: percentage(1/6)
+    .swiper-container
+      height: 450px
+      +sm
+        height: 400px
+      +xs
+        height: 300px
+      +xxs
+        height: 250px
+  &__thumb
+    +cover
+    +before
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border: 2px solid #ddd
+    &.swiper-slide-thumb-active
+      +before
+        border-color: $accent
+  &__slider
+    position: relative
+    width: percentage(5/6)
+    padding-left: $grid-gap / 2
+    padding-left: $half-gap
+    .swiper-container
+      height: 100%
+  &__img
+    +cover
+    // height: 100%
+  &__next, &__prev
+    position: absolute
+    z-index: 2
+    top: 50%
+    transform: translate(0, -50%)
+  &__next
+    right: 0
+    transform: translate(0, -50%) scaleX(-1)
+  &__prev
+    left: $grid-gap / 2
+    left: $half-gap
+
+      

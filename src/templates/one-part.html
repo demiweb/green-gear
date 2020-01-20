@@ -1,0 +1,19 @@
+---
+title: one-part
+page: one-part
+breadcrumbs: {
+  list: [
+    { link: 'Головна' },
+    { item: '-' },
+    { link: 'John Deere' },
+    { item: '-' },
+    { item: 'Бендикс стартера Евро для трактора серії John Deere', modItem: 'breadcrumbs__item-current' }
+  ]
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+  {% include "partials/sections/_s-one-part.html" %}
+  {% include "partials/_more-parts.html" %}
+{% endblock %}

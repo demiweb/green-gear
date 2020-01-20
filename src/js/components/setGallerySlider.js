@@ -8,7 +8,7 @@ import 'lightgallery.js'
 const classes = classNames.slider
 const IS_CENTER = 'center'
 
-function setGallery() {
+export function setGallery() {
   const lgs = [...document.querySelectorAll(`.${classNames.gallery}`)]
 
   if (!lgs.length) return
@@ -92,5 +92,5 @@ export default () => {
   // const onResize = debounce(200, handleResize)
   // window.addEventListener('resize', onResize)
 
-  setGallery()
+  // setGallery()
 }

@@ -1,0 +1,44 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title title"><strong>Також рекомендуємо</strong> запчастини</h2>
+
+    <div class="grid">
+      {% for i in range(0, 4) %}
+        <div class="col col--lg-3 col--md-4 col--xs-6">
+          <!-- begin model-card -->
+          <div class="model-card">
+            <div class="model-card__img js-lazy" data-background-image="./img/9.jpg"></div>
+
+            <div class="model-card__content">
+              <h3 class="model-card__title title title--h3">Бендикс стартера Евро для трактора серії John Deere 6B</h3>
+              <small class="model-card__art small">Артикул: 566651DF</small>
+
+              <div class="model-card__text">Серія поєднує в собі якості і можливості 
+                великих тракторів, інтегровані в більш 
+              компактну і маневрену модель..</div>
+
+              <div class="model-card__price price">
+                <small class="price__label">Вартість:</small>
+                <div class="price__nmb">550</div>
+                <div class="price__curr">грн</div>
+              </div>
+              
+              <div class="model-card__btn">
+                {{ mixins.btn(
+                  title = 'Замовити запчастину',
+                  mod = 'js-popup-open',
+                  href = false,
+                  attributes = { 'data-popup-target': 'order' }
+                ) }}
+              </div>
+              
+            </div>
+          </div>
+          <!-- end model-card -->
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

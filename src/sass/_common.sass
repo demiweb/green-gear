@@ -23,6 +23,11 @@ body
   +lg
     padding-top: $header-height-lg
 
+.main
+  &__breadcrumbs
+    margin-top: 15px
+    margin-bottom: 25px
+
 .logo
   display: inline-block
   font-size: 0
@@ -121,4 +126,27 @@ body
   right: 15px
   +hover
     color: $accent
+
+.price
+  // +flex(flex-start, flex-end)
+  color: $accent
+  &__label
+    display: inline-block
+    vertical-align: baseline  
+    font-size: em(13)
+    color: $c-text-light
+  &__nmb
+    display: inline-block
+    vertical-align: baseline
+    +css-lock(21, 32, 320, 1399, font-size)
+    font-weight: 700
+  &__curr
+    display: inline-block
+    vertical-align: baseline
+    font-size: em(20)
+
+.small
+  font-size: em(13)
+  color: $c-text-light
+  display: block
     

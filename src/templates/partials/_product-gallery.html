@@ -1,0 +1,31 @@
+<!-- begin product-gallery -->
+<div class="product__gallery product-gallery">
+  <div class="product-gallery__thumbs">
+    <div class="swiper-container js-product-gallery-thumbs">
+      <div class="swiper-wrapper">
+        {% for i in range(0, 10) %}
+        <button
+          class="swiper-slide product-gallery__thumb js-lazy"
+          data-background-image="./img/product-gallery/thumb.jpg"></button> 
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="product-gallery__slider">
+    <div class="swiper-container js-product-gallery-slider">
+      <div class="swiper-wrapper js-lightgallery">
+        {% for i in range(0, 10) %}
+        <a
+          href="./img/product-gallery/img.jpg"
+          class="swiper-slide product-gallery__img js-lazy"
+          data-background-image="./img/product-gallery/img.jpg">
+        </a> 
+        {% endfor %}
+      </div>
+    </div>
+    <button class="product-gallery__prev prev js-product-gallery-prev"></button>
+    <button class="product-gallery__next next js-product-gallery-next"></button>
+  </div>
+</div>
+<!-- end product-gallery -->

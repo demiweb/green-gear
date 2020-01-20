@@ -14,9 +14,12 @@ import sayHello from './lib/sayHello'
 import setHTMLClassNames from './components/setHTMLClassNames'
 import setLazy from './components/setLazy'
 import setScrollbar from './components/setScrollbar'
-import setGallerySlider from './components/setGallerySlider'
+import setGallerySlider, { setGallery } from './components/setGallerySlider'
+
 import setTextareaHeight from './components/Textarea/Textarea'
 import scrollTo from './components/scrollTo'
+import setProductGallery from './components/setProductGallery'
+
 // import { setVhProperty } from './helpers'
 
 import Menu from './components/Menu/Menu'
@@ -58,9 +61,11 @@ class App {
       // setVhProperty,
       setLazy,
       setScrollbar,
+      setGallery,
       setGallerySlider,
       setTextareaHeight,
       scrollTo,
+      setProductGallery,
     }
 
     Object.values(this.methods).forEach(fn => fn(this))
