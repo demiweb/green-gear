@@ -6,7 +6,7 @@ PageList:
 - file: blog.html
 - file: blog-page.html
 - file: delivery.html
-- file: models.html
+# - file: models.html
 - file: contacts.html
 - file: models-2.html
 - file: one-part.html
