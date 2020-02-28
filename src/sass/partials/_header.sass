@@ -1,11 +1,11 @@
 .header
-  background-color: $white
+  background-color: $accent
   position: fixed
   left: 0
   right: 0
   top: 0
   z-index: 10
-  color: $c-title
+  color: $white
   box-shadow: 0 0 10px rgba($black, .15)
   &__inner
     height: $header-height
@@ -23,10 +23,17 @@
     @extend .col
     @extend .col--lg-3
     @extend .col--no-bottom-gap
+    position: relative
+    height: 100%
     +lg
       width: auto
       padding-left: 0
       padding-right: 0
+    .logo
+      width: rem(130)
+      +lg
+        width: rem(80)
+
   &__nav
     @extend .col
     @extend .col--lg-7
@@ -86,7 +93,7 @@
 .header-contact
   +tr(color .3s)
   +hover
-    color: $accent
+    color: $c-text
 
 .header-call
   font-size: $fz-sm
