@@ -48,6 +48,7 @@
       padding: 15px
       background-color: $white
       overflow: auto
+      color: $c-text
       +vertical
       +ready
         +tr(transform .5s $easeCustom)
@@ -76,15 +77,18 @@
   &__contacts-in
     text-align: center
     +lg
-      +flex(flex-start, center)
+      +flex(flex-start, center, row, wrap)
       > *
         +notlast
           margin-right: 10px
-    +xs
-      display: block
+    +sm
       > *
-        +notlast
-          margin-right: 0
+        width: 50%
+        margin-right: 0 !important
+    +xxs
+      font-size: em(12, 14)
+    +r(374)
+      font-size: em(9, 14)
   &__burger
     display: none
     +lg
@@ -126,7 +130,8 @@
       top: 5px
     &::before
       bottom: 5px
-  &--active    
+  &--active
+    color: $c-text
     span
       background-color: transparent
       &::before
